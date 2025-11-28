@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://te1rmmdrdr17"
-path="res://.godot/imported/16x16 Walk-Sheet.png-f5cb97b9af74393679dad37469926f92.ctex"
+uid="uid://pn6g7rt2a7o7"
+path="res://.godot/imported/Background_2.png-4734e1f33d6f90f683694a2fe58c757a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NewTest/16x16 Walk-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Walk-Sheet.png-f5cb97b9af74393679dad37469926f92.ctex"]
+source_file="res://assets/Background/Background_2.png"
+dest_files=["res://.godot/imported/Background_2.png-4734e1f33d6f90f683694a2fe58c757a.ctex"]
 
 [params]
 

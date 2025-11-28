@@ -1,15 +1,15 @@
 [gd_scene load_steps=19 format=3 uid="uid://bj0s5e1b5ci6c"]
 
-[ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://characters/Player.tscn" id="1_hfxrc"]
-[ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/levels/killzone.tscn" id="2_bp56n"]
+[ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="1_hfxrc"]
+[ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="2_bp56n"]
 [ext_resource type="Texture2D" uid="uid://caeg4pahpep81" path="res://assets/Tiles/CosmicLilac_Tiles.png" id="3_n3v52"]
-[ext_resource type="Texture2D" uid="uid://bbq042f25tmiq" path="res://assets/NewTest/word_tileset.png" id="4_5sw5k"]
-[ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/NewTest/AssetSheet_Pink.png" id="5_qaaee"]
+[ext_resource type="Texture2D" uid="uid://bbq042f25tmiq" path="res://assets/Tiles/word_tileset.png" id="4_5sw5k"]
+[ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/Tiles/AssetSheet_Pink.png" id="5_qaaee"]
 [ext_resource type="PackedScene" uid="uid://byuisg5swypli" path="res://ui/dialogue_ui.tscn" id="6_i1bxb"]
-[ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://characters/guide.tscn" id="7_8tmar"]
-[ext_resource type="PackedScene" uid="uid://b60n7lcmsniy" path="res://scenes/levels/Platform.tscn" id="8_bt2hq"]
-[ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/levels/spring_plant.tscn" id="9_a3xo5"]
-[ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/levels/cloud.tscn" id="10_l3033"]
+[ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="7_8tmar"]
+[ext_resource type="PackedScene" uid="uid://b60n7lcmsniy" path="res://scenes/Materials/Platform.tscn" id="8_bt2hq"]
+[ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="9_a3xo5"]
+[ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/Materials/cloud.tscn" id="10_l3033"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s8va5"]
 distance = -66.0

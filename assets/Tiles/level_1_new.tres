@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://c1ad866w4j21w"]
 
-[ext_resource type="Texture2D" uid="uid://caeg4pahpep81" path="res://assets/Tiles/CosmicLilac_Tiles.png" id="1_vfsk8"]
-[ext_resource type="Texture2D" uid="uid://bbq042f25tmiq" path="res://assets/NewTest/word_tileset.png" id="2_vanc8"]
-[ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/NewTest/AssetSheet_Pink.png" id="3_ybhdi"]
+[ext_resource type="Texture2D" uid="uid://caeg4pahpep81" path="res://assets/Tiles/CosmicLilac_Tiles.png" id="1_p4i5k"]
+[ext_resource type="Texture2D" uid="uid://bbq042f25tmiq" path="res://assets/Tiles/word_tileset.png" id="2_iuf43"]
+[ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/Tiles/AssetSheet_Pink.png" id="3_oje2s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsrm0"]
-texture = ExtResource("1_vfsk8")
+texture = ExtResource("1_p4i5k")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -146,7 +146,7 @@ texture = ExtResource("1_vfsk8")
 5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxy0u"]
-texture = ExtResource("2_vanc8")
+texture = ExtResource("2_iuf43")
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
@@ -368,7 +368,7 @@ texture = ExtResource("2_vanc8")
 12:14/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_excbq"]
-texture = ExtResource("3_ybhdi")
+texture = ExtResource("3_oje2s")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
