@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b60n7lcmsniy"]
+
+[ext_resource type="Texture2D" uid="uid://caeg4pahpep81" path="res://assets/Tiles/CosmicLilac_Tiles.png" id="1_axdvg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2onec"]
+size = Vector2(33.5, 10)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_axdvg")
+region_enabled = true
+region_rect = Rect2(48, 112, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_2onec")
+one_way_collision = true

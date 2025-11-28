@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo5ucb2wkvtx2"]
+
+[ext_resource type="Texture2D" uid="uid://bn85p3mbjfooj" path="res://assets/Tiles/sr24b400f9bf2aws3.png" id="1_5rcxs"]
+[ext_resource type="Script" uid="uid://dxot325xyx26m" path="res://scripts/spring_plant.gd" id="1_l07a7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l07a7"]
+radius = 103.574
+
+[node name="SpringPlant" type="Area2D"]
+script = ExtResource("1_l07a7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_5rcxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.0888, 1.07517)
+shape = SubResource("CircleShape2D_l07a7")

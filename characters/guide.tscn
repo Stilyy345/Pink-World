@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cym07edxcvjf1"]
+
+[ext_resource type="Script" uid="uid://d4ncjxgx2e4ki" path="res://scripts/guide.gd" id="1_0el4p"]
+[ext_resource type="Texture2D" uid="uid://q23vd5bvt6ic" path="res://icon.svg" id="1_or254"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rb1b7"]
+radius = 69.8531
+
+[node name="Guide" type="Node2D"]
+scale = Vector2(0.229052, 0.229052)
+script = ExtResource("1_0el4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 1.19209e-07)
+scale = Vector2(0.328125, 0.328125)
+texture = ExtResource("1_or254")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rb1b7")
