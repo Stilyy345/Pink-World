@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Game Test Project"
-run/main_scene="uid://c45m3qa101517"
+config/name="Pink-World"
+run/main_scene="uid://dw1o28lb7aqxw"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
