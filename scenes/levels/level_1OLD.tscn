@@ -577,7 +577,7 @@ scale = Vector2(0.608238, 0.608238)
 [node name="Killzone" parent="." instance=ExtResource("2_bp56n")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, 130)
+position = Vector2(1, 120)
 shape = SubResource("WorldBoundaryShape2D_s8va5")
 
 [node name="TileMap" type="TileMap" parent="."]
