@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://c1ad866w4j21w" path="res://assets/Tiles/level_1_new.tres" id="1_g2h2n"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="2_ra442"]
-[ext_resource type="PackedScene" uid="uid://wblsdcbxropy" path="res://scenes/Materials/Platform2.tscn" id="3_ra442"]
+[ext_resource type="PackedScene" path="res://scenes/Materials/Platform2.tscn" id="3_ra442"]
 [ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/Materials/cloud.tscn" id="4_fiq81"]
 
 [node name="level2" type="Node2D"]
