@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://wblsdcbxropy"]
+
+[ext_resource type="Texture2D" uid="uid://bbq042f25tmiq" path="res://assets/Tiles/word_tileset.png" id="1_b25vd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2onec"]
+size = Vector2(30, 10)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.42)
+texture = ExtResource("1_b25vd")
+region_enabled = true
+region_rect = Rect2(2, 16, 44, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.6)
+shape = SubResource("RectangleShape2D_2onec")
+one_way_collision = true
