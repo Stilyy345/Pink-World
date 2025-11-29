@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ousf1m0rwn0"]
+
+[ext_resource type="Texture2D" uid="uid://b78vut02x2cd7" path="res://assets/Tiles/Assets.png" id="2_pipra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2onec"]
+size = Vector2(34, 10)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.181169, 0.125)
+scale = Vector2(0.747504, 0.683333)
+texture = ExtResource("2_pipra")
+region_enabled = true
+region_rect = Rect2(338, 81, 45, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2onec")
+one_way_collision = true
