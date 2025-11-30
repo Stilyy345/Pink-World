@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://c1ad866w4j21w" path="res://assets/Tiles/level_1_new.tres" id="1_g2h2n"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="2_ra442"]
-[ext_resource type="PackedScene" uid="uid://wblsdcbxropy" path="res://scenes/Materials/Platform2.tscn" id="3_ra442"]
+[ext_resource type="PackedScene" path="res://scenes/Materials/Platform2.tscn" id="3_ra442"]
 [ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/Materials/cloud.tscn" id="4_fiq81"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="6_qpwj6"]
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="7_ibugp"]
@@ -45,44 +45,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3p04p"]
-_data = {
-&"RESET": SubResource("Animation_8qukl"),
-&"move1": SubResource("Animation_ibugp")
-}
-
-[sub_resource type="Animation" id="Animation_qpwj6"]
-resource_name = "new_animation2"
-length = 1.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.766667, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(585, -144), Vector2(480, -142), Vector2(585, -144)]
-}
-
-[sub_resource type="Animation" id="Animation_3p04p"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(585, -144)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsp8v"]
 _data = {
 &"RESET": SubResource("Animation_3p04p"),
 &"new_animation2": SubResource("Animation_qpwj6")
