@@ -15,6 +15,7 @@ script = ExtResource("1_8a6yt")
 
 [node name="VanishingTimer" type="Timer" parent="."]
 wait_time = 0.6
+one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.8, 0.8)
@@ -37,7 +38,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_qkkm6")
 
 [node name="RespawnTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 10.0
 one_shot = true
 
 [connection signal="timeout" from="VanishingTimer" to="." method="_on_vanishing_timer_timeout"]

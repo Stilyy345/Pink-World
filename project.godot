@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pink-World"
-run/main_scene="uid://d2an5er8gp5tk"
+run/main_scene="uid://dw1o28lb7aqxw"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
