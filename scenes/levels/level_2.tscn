@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="7_ibugp"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="8_8qukl"]
 [ext_resource type="PackedScene" uid="uid://byuisg5swypli" path="res://ui/dialogue_ui.tscn" id="9_3p04p"]
-[ext_resource type="PackedScene" uid="uid://csuk8mdj18wat" path="res://scenes/Materials/next_level.tscn" id="10_qsp8v"]
+[ext_resource type="PackedScene" path="res://scenes/Materials/next_level.tscn" id="10_qsp8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpwj6"]
 size = Vector2(160, 24)
