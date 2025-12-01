@@ -8,9 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/Materials/cloud.tscn" id="6_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
-[ext_resource type="PackedScene" uid="uid://cehnl8bshnvw4" path="res://scenes/Materials/cloud_2.tscn" id="9_dga24"]
-[ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="12_iav0o"]
-[ext_resource type="PackedScene" uid="uid://byuisg5swypli" path="res://ui/dialogue_ui.tscn" id="13_dnkej"]
+[ext_resource type="PackedScene" path="res://scenes/Materials/cloud_2.tscn" id="9_dga24"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6761a"]
 distance = -85.0
