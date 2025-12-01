@@ -15,7 +15,7 @@ size = Vector2(160, 24)
 [node name="level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(-1545, -31)
+position = Vector2(-28, 124)
 
 [node name="Killzone2" parent="." instance=ExtResource("7_ibugp")]
 position = Vector2(-441, 65)
@@ -99,13 +99,13 @@ position = Vector2(50, 108)
 
 [node name="SpringPlants" type="Node" parent="."]
 
-[node name="SpringPlant2" parent="SpringPlants" instance=ExtResource("6_qpwj6")]
-position = Vector2(280, 90)
-scale = Vector2(0.0711976, 0.0622847)
-
 [node name="SpringPlant" parent="SpringPlants" instance=ExtResource("6_qpwj6")]
-position = Vector2(-80, -417)
-scale = Vector2(0.107097, 0.0864507)
+position = Vector2(271, 87)
+scale = Vector2(1.34323, 1.33986)
+
+[node name="SpringPlant2" parent="SpringPlants" instance=ExtResource("6_qpwj6")]
+position = Vector2(-80, -413)
+scale = Vector2(2.0771, 1.46922)
 
 [node name="MovePlatform2" parent="." instance=ExtResource("3_ra442")]
 position = Vector2(585, -144)
