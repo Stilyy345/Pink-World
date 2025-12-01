@@ -66,3 +66,5 @@ zoom = Vector2(4, 4)
 limit_bottom = 300
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]

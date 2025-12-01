@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://csuk8mdj18wat"]
+
+[ext_resource type="Script" uid="uid://caqhy1no7ekbn" path="res://scripts/next_level.gd" id="1_cv78g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72w2m"]
+
+[node name="NextLevel" type="Area2D"]
+script = ExtResource("1_cv78g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-591, -531)
+scale = Vector2(3.69823, 3.73573)
+shape = SubResource("CircleShape2D_72w2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-591, -531)
+scale = Vector2(3.69823, 3.73573)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

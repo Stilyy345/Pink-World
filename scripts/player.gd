@@ -18,6 +18,10 @@ func _physics_process(delta: float) -> void:
 
 	velocity.x = input_dir * speed
 
+	# >>> Обръщане на героя по посока на движение <<<
+	if input_dir != 0.0:
+		$Sprite2D.flip_h = input_dir < 0.0
+
 	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
