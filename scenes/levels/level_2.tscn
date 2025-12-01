@@ -208,7 +208,7 @@ _data = {
 [node name="level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(-454, -528)
+position = Vector2(-1528, -32)
 scale = Vector2(0.758923, 1)
 
 [node name="Killzone2" parent="." instance=ExtResource("7_ibugp")]
@@ -359,4 +359,4 @@ scale = Vector2(2.0771, 1.46922)
 [node name="DialogueUI" parent="." instance=ExtResource("9_3p04p")]
 
 [node name="NextLevel" parent="." instance=ExtResource("10_qsp8v")]
-position = Vector2(-1, 0)
+position = Vector2(-2, -2)
