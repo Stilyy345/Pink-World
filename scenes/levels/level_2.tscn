@@ -105,7 +105,7 @@ scale = Vector2(0.0711976, 0.0622847)
 
 [node name="SpringPlant" parent="SpringPlants" instance=ExtResource("6_qpwj6")]
 position = Vector2(-80, -417)
-scale = Vector2(0.107097, 0.0864507)
+scale = Vector2(0.665845, 0.537482)
 
 [node name="MovePlatform2" parent="." instance=ExtResource("3_ra442")]
 position = Vector2(585, -144)
