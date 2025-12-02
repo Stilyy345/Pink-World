@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dw1o28lb7aqxw"]
+[gd_scene load_steps=43 format=3 uid="uid://dw1o28lb7aqxw"]
 
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="1_6761a"]
 [ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/Tiles/AssetSheet_Pink.png" id="1_ksju7"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://cehnl8bshnvw4" path="res://scenes/Materials/cloud_2.tscn" id="9_dga24"]
+[ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6761a"]
 distance = -85.0
@@ -611,10 +612,13 @@ _data = {
 &"move": SubResource("Animation_gmpev")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_excbq"]
+size = Vector2(27, 38)
+
 [node name="level_1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_nsrm0")]
-position = Vector2(-57, -44)
+position = Vector2(873, -876)
 
 [node name="Killzone" parent="." instance=ExtResource("1_6761a")]
 position = Vector2(0, 247)
@@ -903,3 +907,9 @@ position = Vector2(728, -790)
 
 [node name="FastCloud25" parent="FastClouds" instance=ExtResource("9_dga24")]
 position = Vector2(728, -790)
+
+[node name="NextLevel" parent="." instance=ExtResource("10_qxy0u")]
+position = Vector2(961, -884)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NextLevel"]
+shape = SubResource("RectangleShape2D_excbq")
