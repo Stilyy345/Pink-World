@@ -31,12 +31,15 @@ func _physics_process(delta: float) -> void:
 	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
+		anim.play("jump_start")
 	
 # --- ANIMATION LOGIC ---
 	if not is_on_floor():
-		# optional: play a jump/fall anim here
-		anim.play("jump")
-		pass
+		# In the air
+		if velocity.y > 0.0:
+			# Falling / after apex → hold air pose
+			if anim.animation != "jump_air":
+				anim.play("jump_air")
 		
 	else:
 		if input_dir != 0.0:

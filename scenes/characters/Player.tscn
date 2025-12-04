@@ -21,23 +21,23 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("2_pf73y")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6phi"]
-atlas = ExtResource("3_7wym0")
-region = Rect2(0, 0, 20, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oihyf"]
-atlas = ExtResource("3_7wym0")
-region = Rect2(20, 0, 20, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7lms1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4687"]
 atlas = ExtResource("3_7wym0")
 region = Rect2(40, 0, 20, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ufbvs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpxo2"]
+atlas = ExtResource("3_7wym0")
+region = Rect2(0, 0, 20, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb7xv"]
+atlas = ExtResource("3_7wym0")
+region = Rect2(20, 0, 20, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0xnk"]
 atlas = ExtResource("3_7wym0")
 region = Rect2(60, 0, 20, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mqro2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cro7t"]
 atlas = ExtResource("3_7wym0")
 region = Rect2(80, 0, 20, 100)
 
@@ -78,23 +78,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m6phi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oihyf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7lms1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ufbvs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mqro2")
+"texture": SubResource("AtlasTexture_q4687")
 }],
 "loop": true,
-"name": &"jump",
+"name": &"jump_air",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpxo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb7xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0xnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cro7t")
+}],
+"loop": false,
+"name": &"jump_start",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -126,7 +131,6 @@ z_index = 5
 position = Vector2(1, -5)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_v0k12")
-animation = &"jump"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
