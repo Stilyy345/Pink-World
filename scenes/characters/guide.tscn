@@ -1,7 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://cym07edxcvjf1"]
+[gd_scene load_steps=13 format=3 uid="uid://cym07edxcvjf1"]
 
 [ext_resource type="Script" uid="uid://d4ncjxgx2e4ki" path="res://scripts/guide.gd" id="1_0el4p"]
-[ext_resource type="Texture2D" uid="uid://q23vd5bvt6ic" path="res://icon.svg" id="1_or254"]
+[ext_resource type="Texture2D" uid="uid://b2aauyctm1h6u" path="res://assets/CharacterAssets/Fairy/Fairy 1.png" id="2_jyi48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kgm4"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3e3k"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gstws"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45i2m"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yd68"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grpmm"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx06w"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydso6"]
+atlas = ExtResource("2_jyi48")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xuymu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kgm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3e3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gstws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45i2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yd68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grpmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx06w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydso6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rb1b7"]
 radius = 69.8531
@@ -10,10 +74,13 @@ radius = 69.8531
 scale = Vector2(0.229052, 0.229052)
 script = ExtResource("1_0el4p")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 1.19209e-07)
-scale = Vector2(0.328125, 0.328125)
-texture = ExtResource("1_or254")
+scale = Vector2(1.73184, 1.73184)
+sprite_frames = SubResource("SpriteFrames_xuymu")
+autoplay = "default"
+frame = 2
+frame_progress = 0.424636
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 # --- ANIMATION LOGIC ---
 	if not is_on_floor():
 		# optional: play a jump/fall anim here
-		# sprite.play("jump")
+		anim.play("jump")
 		pass
 		
 	else:

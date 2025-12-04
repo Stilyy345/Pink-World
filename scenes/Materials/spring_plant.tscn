@@ -1,18 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo5ucb2wkvtx2"]
+[gd_scene load_steps=9 format=3 uid="uid://bo5ucb2wkvtx2"]
 
-[ext_resource type="Texture2D" uid="uid://bn85p3mbjfooj" path="res://assets/Tiles/sr24b400f9bf2aws3.png" id="1_5rcxs"]
 [ext_resource type="Script" uid="uid://dxot325xyx26m" path="res://scripts/spring_plant.gd" id="1_l07a7"]
+[ext_resource type="Texture2D" uid="uid://c7xt5hkacklx6" path="res://assets/CharacterAssets/Free Mushrooms/Mushroom_Spotted.png" id="2_lvt1w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae5bh"]
+atlas = ExtResource("2_lvt1w")
+region = Rect2(8, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13o2j"]
+atlas = ExtResource("2_lvt1w")
+region = Rect2(40, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62mrj"]
+atlas = ExtResource("2_lvt1w")
+region = Rect2(72, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7pxa"]
+atlas = ExtResource("2_lvt1w")
+region = Rect2(104, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdqby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae5bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13o2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62mrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7pxa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l07a7"]
 radius = 103.574
 
 [node name="SpringPlant" type="Area2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_l07a7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.008, 0.008)
-texture = ExtResource("1_5rcxs")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2.98023e-08)
+scale = Vector2(1.2139, 1.2139)
+sprite_frames = SubResource("SpriteFrames_tdqby")
+autoplay = "default"
+frame = 2
+frame_progress = 0.363861
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.008, 0.008)
+position = Vector2(0, 0.453094)
+scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_l07a7")

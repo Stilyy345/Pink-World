@@ -8,12 +8,12 @@
 script = ExtResource("1_cv78g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-591, -531)
+position = Vector2(0, 4.76837e-07)
 scale = Vector2(3.69823, 3.73573)
 shape = SubResource("CircleShape2D_72w2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-591, -531)
+position = Vector2(0, 2.38419e-07)
 scale = Vector2(3.69823, 3.73573)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
