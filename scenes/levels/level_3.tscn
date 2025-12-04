@@ -12,4 +12,4 @@ position = Vector2(7, 114)
 shape = SubResource("CircleShape2D_rkukh")
 
 [node name="Player" parent="." instance=ExtResource("1_o8c3j")]
-position = Vector2(-5, -12)
+position = Vector2(7, -7)
