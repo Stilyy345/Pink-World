@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/Materials/cloud.tscn" id="6_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
-[ext_resource type="PackedScene" uid="uid://cehnl8bshnvw4" path="res://scenes/Materials/cloud_2.tscn" id="9_dga24"]
+[ext_resource type="PackedScene" path="res://scenes/Materials/cloud_2.tscn" id="9_dga24"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://d2vs1203tkym8" path="res://scenes/Materials/cloud_respawning_fast.tscn" id="11_excbq"]
 [ext_resource type="PackedScene" uid="uid://i8eb7q4gtak5" path="res://ui/dialogue_trigger.tscn" id="12_iav0o"]
