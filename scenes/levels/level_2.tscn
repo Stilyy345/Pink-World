@@ -208,7 +208,7 @@ _data = {
 [node name="level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(-1527, -34)
+position = Vector2(-1366, 78)
 
 [node name="Killzone2" parent="." instance=ExtResource("7_ibugp")]
 position = Vector2(-415, 80)
