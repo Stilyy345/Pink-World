@@ -94,7 +94,7 @@ text = "Controls:
 
 → Right Arrow – move right
 ← Left Arrow – move left
-Enter – jump"
+Space – jump"
 
 [node name="PanelContainer2" type="PanelContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -107,6 +107,7 @@ text = "Interaction with the fairy:
 Ctrl + E – read the message"
 
 [node name="Guide" parent="." instance=ExtResource("3_hm4m4")]
+visible = false
 position = Vector2(645, 429)
 scale = Vector2(1, 1)
 
