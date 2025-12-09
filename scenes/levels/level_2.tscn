@@ -208,7 +208,7 @@ _data = {
 [node name="level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(45, -392)
+position = Vector2(-1559, -81)
 
 [node name="Killzone2" parent="." instance=ExtResource("7_ibugp")]
 position = Vector2(-415, 80)
@@ -216,7 +216,6 @@ scale = Vector2(184.44, 2.84553)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2"]
 position = Vector2(-0.0271094, 5.09571)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_qpwj6")
 
 [node name="Killzone" parent="." instance=ExtResource("7_ibugp")]
