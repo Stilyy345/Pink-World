@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://clvhw6x5y65pd"]
 
-[ext_resource type="Script" uid="uid://cs63cdk534hhb" path="res://scenes/options_menu.gd" id="1_liyum"]
+[ext_resource type="Script" uid="uid://cs63cdk534hhb" path="res://scripts/options_menu.gd" id="1_liyum"]
 [ext_resource type="Texture2D" uid="uid://k41uyrbbnk6p" path="res://assets/Background/Doc1.png" id="2_ijpji"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="3_hm4m4"]
 

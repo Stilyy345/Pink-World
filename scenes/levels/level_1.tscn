@@ -205,7 +205,7 @@ _data = {
 &"new_animation1": SubResource("Animation_qpwj6")
 }
 
-[node name="level2" type="Node2D"]
+[node name="level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_nsrm0")]
 position = Vector2(-1546, -34)
