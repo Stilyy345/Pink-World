@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://clvhw6x5y65pd"]
+[gd_scene load_steps=11 format=3 uid="uid://clvhw6x5y65pd"]
 
 [ext_resource type="Script" uid="uid://cs63cdk534hhb" path="res://scripts/options_menu.gd" id="1_liyum"]
 [ext_resource type="Texture2D" uid="uid://k41uyrbbnk6p" path="res://assets/Background/Doc1.png" id="2_ijpji"]
+[ext_resource type="Script" uid="uid://uw17p818r3ie" path="res://ui/button.gd" id="3_cpiqh"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="3_hm4m4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hm4m4"]
@@ -78,6 +79,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_lfjc7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3xsyx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_hm4m4")
 text = "Back"
+script = ExtResource("3_cpiqh")
 
 [node name="PanelContainer" type="PanelContainer" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(350, 200)

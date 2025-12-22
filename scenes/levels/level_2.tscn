@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://beg3clvpca62w"]
+[gd_scene load_steps=47 format=3 uid="uid://beg3clvpca62w"]
 
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="2_ra442"]
 [ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/Tiles/AssetSheet_Pink.png" id="3_r88tb"]
@@ -11,9 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="7_ibugp"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="8_8qukl"]
 [ext_resource type="PackedScene" uid="uid://byuisg5swypli" path="res://ui/dialogue_ui.tscn" id="9_3p04p"]
-[ext_resource type="PackedScene" uid="uid://cehnl8bshnvw4" path="res://scenes/Materials/cloud_2.tscn" id="9_gw1l3"]
+[ext_resource type="PackedScene" path="res://scenes/Materials/cloud_2.tscn" id="9_gw1l3"]
 [ext_resource type="PackedScene" uid="uid://d2vs1203tkym8" path="res://scenes/Materials/cloud_respawning_fast.tscn" id="10_p4se4"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qsp8v"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scenes/levels/manu_button.gd" id="15_1yj8c"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6761a"]
 distance = -85.0
@@ -958,3 +959,17 @@ position = Vector2(973, -885)
 [node name="Guide" parent="." instance=ExtResource("8_8qukl")]
 position = Vector2(-5, -12)
 dialogue_lines = Array[String](["\"Hi\""])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/CanvasLayer"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 56.0
+text = "Menu"
+script = ExtResource("15_1yj8c")
+
+[connection signal="pressed" from="CanvasLayer/CanvasLayer/MenuButton" to="CanvasLayer/CanvasLayer/MenuButton" method="_on_pressed"]

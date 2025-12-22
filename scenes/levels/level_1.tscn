@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2an5er8gp5tk"]
+[gd_scene load_steps=29 format=3 uid="uid://d2an5er8gp5tk"]
 
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="1_6761a"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="3_nsrm0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scenes/levels/manu_button.gd" id="11_excbq"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="14_mm8aj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpwj6"]
@@ -367,3 +368,15 @@ position = Vector2(-587, -532)
 [node name="Guide2" parent="." instance=ExtResource("14_mm8aj")]
 position = Vector2(-17, -407)
 dialogue_lines = Array[String](["You're so close"])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 56.0
+text = "Menu"
+script = ExtResource("11_excbq")
+
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="CanvasLayer/MenuButton" method="_on_pressed"]
