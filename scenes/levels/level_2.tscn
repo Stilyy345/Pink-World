@@ -620,7 +620,7 @@ _data = {
 [node name="level_2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(-62, 3)
+position = Vector2(810, -824)
 
 [node name="Killzone" parent="." instance=ExtResource("7_ibugp")]
 position = Vector2(0, 247)
