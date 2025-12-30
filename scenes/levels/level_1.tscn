@@ -212,7 +212,7 @@ _data = {
 script = ExtResource("1_iav0o")
 
 [node name="Player" parent="." instance=ExtResource("3_nsrm0")]
-position = Vector2(-345, -20)
+position = Vector2(-1528, -37)
 
 [node name="WaterArea" parent="." instance=ExtResource("1_6761a")]
 position = Vector2(-415, 80)
@@ -221,7 +221,6 @@ script = ExtResource("4_dnkej")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterArea"]
 position = Vector2(-0.0352423, 5.44714)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_qpwj6")
 debug_color = Color(0.37501, 0.512006, 0.89276, 0.42)
 
@@ -369,7 +368,8 @@ scale = Vector2(2.0771, 1.46922)
 [node name="DialogueUI" parent="." instance=ExtResource("5_iav0o")]
 
 [node name="NextLevel" parent="." instance=ExtResource("10_qxy0u")]
-position = Vector2(-587, -532)
+position = Vector2(-590, -530)
+scale = Vector2(0.762434, 0.762434)
 
 [node name="Guide2" parent="." instance=ExtResource("14_mm8aj")]
 position = Vector2(-17, -407)

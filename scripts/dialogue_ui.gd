@@ -28,6 +28,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _show_current_line() -> void:
 	text_label.text = lines[current_index]
+	# start transparent
+	text_label.modulate.a = 0.0
+	var t := create_tween()
+	t.tween_property(text_label, "modulate:a", 1.0, 0.5)
 
 func _next_line() -> void:
 	current_index += 1
@@ -38,4 +42,7 @@ func _next_line() -> void:
 
 func _end_dialogue() -> void:
 	is_active = false
-	hide()
+
+	var t := create_tween()
+	t.tween_property(text_label, "modulate:a", 0.0, 0.2)
+	t.finished.connect(hide)

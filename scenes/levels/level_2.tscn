@@ -30,6 +30,9 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6761a"]
 distance = -85.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw1l3"]
+size = Vector2(160, 52)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iamk"]
 texture = ExtResource("3_r88tb")
 0:0/0 = 0
@@ -1245,14 +1248,11 @@ _data = {
 &"move": SubResource("Animation_lkn2k")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw1l3"]
-size = Vector2(160, 52)
-
 [node name="level_2" type="Node2D"]
 script = ExtResource("1_1a10c")
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(60, -368)
+position = Vector2(-59, -5)
 collision_layer = 9
 collision_mask = 6153
 
@@ -1262,6 +1262,15 @@ position = Vector2(0, 247)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, -10)
 shape = SubResource("WorldBoundaryShape2D_6761a")
+
+[node name="WaterArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("19_p4se4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterArea"]
+position = Vector2(-48, -266)
+shape = SubResource("RectangleShape2D_gw1l3")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nsrm0")
@@ -1618,6 +1627,9 @@ position = Vector2(-840, -356)
 [node name="SpringPlant6" parent="SpringPlants" instance=ExtResource("17_v8d84")]
 position = Vector2(35, -794)
 
+[node name="SpringPlant5" parent="SpringPlants" instance=ExtResource("17_v8d84")]
+position = Vector2(-778, -542)
+
 [node name="NextLevel" parent="." instance=ExtResource("10_qsp8v")]
 position = Vector2(973, -885)
 
@@ -1625,7 +1637,7 @@ position = Vector2(973, -885)
 
 [node name="Guide" parent="." instance=ExtResource("8_8qukl")]
 position = Vector2(-5, -12)
-dialogue_lines = Array[String](["\"Hi\""])
+dialogue_lines = Array[String](["Welcome, Lumi.", "You’ve reached the World of Petals and Stars — where gentle dreams grow under endless skies.", "This place reflects your calm… and your doubts.", "As you explore, you may find fragments of fallen stars.", "They hold pieces of forgotten memories, waiting to be remembered.", "Listen closely. The exit lies ahead, hidden where dreams begin to thin.", "Stay light on your feet, and trust yourself. I’m still with you."])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1638,15 +1650,6 @@ offset_right = 136.0
 offset_bottom = 56.0
 text = "Menu"
 script = ExtResource("15_1yj8c")
-
-[node name="WaterArea" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("19_p4se4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterArea"]
-position = Vector2(-48, -266)
-shape = SubResource("RectangleShape2D_gw1l3")
 
 [node name="Backgrounds" type="Node" parent="."]
 
@@ -1692,8 +1695,5 @@ position = Vector2(51, -305)
 scale = Vector2(1.02176, 1.02176)
 texture = ExtResource("25_mx6s3")
 
-[node name="SpringPlant" parent="." instance=ExtResource("17_v8d84")]
-position = Vector2(-778, -542)
-
-[connection signal="pressed" from="CanvasLayer/CanvasLayer/MenuButton" to="CanvasLayer/CanvasLayer/MenuButton" method="_on_pressed"]
 [connection signal="body_entered" from="WaterArea" to="WaterArea" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/CanvasLayer/MenuButton" to="CanvasLayer/CanvasLayer/MenuButton" method="_on_pressed"]

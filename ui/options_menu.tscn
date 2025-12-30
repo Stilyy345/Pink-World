@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://clvhw6x5y65pd"]
+[gd_scene load_steps=12 format=3 uid="uid://clvhw6x5y65pd"]
 
 [ext_resource type="Script" uid="uid://cs63cdk534hhb" path="res://scripts/options_menu.gd" id="1_liyum"]
 [ext_resource type="Texture2D" uid="uid://k41uyrbbnk6p" path="res://assets/Background/Doc1.png" id="2_ijpji"]
 [ext_resource type="Script" uid="uid://uw17p818r3ie" path="res://scripts/button.gd" id="3_cpiqh"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="3_hm4m4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cpiqh"]
+texture = ExtResource("2_ijpji")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hm4m4"]
 
@@ -31,14 +34,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_liyum")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Panel2" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ijpji")
+theme_override_styles/panel = SubResource("StyleBoxTexture_cpiqh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

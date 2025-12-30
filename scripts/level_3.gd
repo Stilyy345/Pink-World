@@ -1,5 +1,6 @@
 extends Control
 
+@onready var deaths_label: Label = $VBoxContainer/DeathsLabel
 @onready var time_label: Label = $VBoxContainer/TimeLabel
 @onready var label: Label = $VBoxContainer/Label
 
@@ -8,6 +9,7 @@ func _ready() -> void:
 	print("END SCREEN TIMER VALUE:", GameTimer.time)
 	GameTimer.stop()
 	time_label.text = "Time: " + format_time(GameTimer.time)
+	deaths_label.text = "Deaths: " + str(GameTimer.deaths)
 	
 	var base_y := label.position.y
 

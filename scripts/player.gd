@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var jump_velocity: float = -250.0
 @onready var anim: AnimatedSprite2D = $Sprite2D
 
+var input_locked := false
 var drowning := false
 var spawn_position: Vector2
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -13,6 +14,9 @@ func _ready() -> void:
 	anim.play("default")
 	
 func _physics_process(delta: float) -> void:
+	if input_locked:
+		return
+		
 	#DROWNING
 	if drowning:
 		move_and_slide()
@@ -92,4 +96,5 @@ func start_water_death():
 	
 func _restart_level_after_delay() -> void:
 	await get_tree().create_timer(1.25).timeout
+	GameTimer.add_death()
 	get_tree().reload_current_scene()

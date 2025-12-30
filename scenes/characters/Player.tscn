@@ -120,7 +120,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pq8s5"]
-size = Vector2(11, 16.1667)
+size = Vector2(13.5, 17.5417)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_mask = 6145
@@ -134,8 +134,7 @@ sprite_frames = SubResource("SpriteFrames_v0k12")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.4, -4.7)
-scale = Vector2(1.1, 1.1)
+position = Vector2(-0.25, -5.22916)
 shape = SubResource("RectangleShape2D_pq8s5")
 debug_color = Color(0.21667, 0.580643, 0.731397, 0.42)
 

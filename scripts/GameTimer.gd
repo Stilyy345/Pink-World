@@ -1,5 +1,6 @@
 extends Node
 
+var deaths := 0
 var time := 0.0
 var running := false
 
@@ -12,7 +13,11 @@ func stop():
 
 func reset():
 	time = 0.0
+	deaths = 0
 	running = false
+
+func add_death():
+	deaths += 1
 
 func _process(delta):
 	if running:

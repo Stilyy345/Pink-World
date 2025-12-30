@@ -67,6 +67,12 @@ text = "Completion time: 00:00.00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="DeathsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Deaths: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 400
