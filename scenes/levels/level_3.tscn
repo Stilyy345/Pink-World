@@ -1,15 +1,89 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtmdkalawwjqd"]
+[gd_scene load_steps=6 format=3 uid="uid://dtmdkalawwjqd"]
 
-[ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="1_o8c3j"]
+[ext_resource type="Script" uid="uid://c0jbkv8fwwx3v" path="res://scenes/levels/level_3.gd" id="1_o8c3j"]
+[ext_resource type="Shader" uid="uid://dppbu4plcj4lt" path="res://ui/new_shader.gdshader" id="2_0ljxa"]
+[ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="2_44gv1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rkukh"]
-radius = 107.564
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0qepi"]
+shader = ExtResource("2_0ljxa")
+shader_parameter/speed = 2.5
+shader_parameter/frequency = 8.0
 
-[node name="Level_3" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_0ljxa"]
+font = ExtResource("2_44gv1")
+font_size = 39
+font_color = Color(0.982343, 0.982342, 0.982342, 1)
+outline_size = 2
+outline_color = Color(0.377799, 9.93178e-05, 0.378605, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7, 114)
-shape = SubResource("CircleShape2D_rkukh")
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o8c3j")
 
-[node name="Player" parent="." instance=ExtResource("1_o8c3j")]
-position = Vector2(7, -7)
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.298704, 6.57947e-05, 0.302405, 1)
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.835294, 0.164706, 0.807843, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -498.0
+offset_top = -101.5
+offset_right = 498.0
+offset_bottom = 101.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+material = SubResource("ShaderMaterial_0qepi")
+layout_mode = 2
+text = "Gongartulations! 
+You are the winner!"
+label_settings = SubResource("LabelSettings_0ljxa")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Main Menu"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 10
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/Button2" to="." method="_on_button_2_pressed"]
