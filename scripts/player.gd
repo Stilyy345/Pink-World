@@ -4,13 +4,20 @@ extends CharacterBody2D
 @export var jump_velocity: float = -250.0
 @onready var anim: AnimatedSprite2D = $Sprite2D
 
+var drowning := false
+var spawn_position: Vector2
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready() -> void:
-	print(anim.sprite_frames.get_animation_names())
+	spawn_position = global_position
 	anim.play("default")
 	
 func _physics_process(delta: float) -> void:
+	#DROWNING
+	if drowning:
+		move_and_slide()
+		return
+		
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -52,3 +59,41 @@ func _physics_process(delta: float) -> void:
 				anim.play("default")
 				
 	move_and_slide()
+	
+func start_water_death():
+	if drowning:
+		return
+
+	drowning = true
+	velocity = Vector2.ZERO
+
+	# Optional: lock animation
+	anim.stop()
+
+	var tween := create_tween()
+
+	# Sink down
+	tween.tween_property(
+		self,
+		"position:y",
+		position.y + 48,
+		1.2
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+
+	# Turn blue
+	tween.parallel().tween_property(
+		$Sprite2D,
+		"modulate",
+		Color(0.4, 0.6, 1.0),
+		0.6
+	)
+
+	tween.finished.connect(_respawn_from_water)
+	
+func _respawn_from_water():
+	global_position = spawn_position
+	velocity = Vector2.ZERO
+	drowning = false
+
+	$Sprite2D.modulate = Color.WHITE
+	anim.play("default")
