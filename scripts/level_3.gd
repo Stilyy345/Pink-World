@@ -1,8 +1,14 @@
 extends Control
 
+@onready var time_label: Label = $VBoxContainer/TimeLabel
 @onready var label: Label = $VBoxContainer/Label
 
 func _ready() -> void:
+	#Timer function
+	print("END SCREEN TIMER VALUE:", GameTimer.time)
+	GameTimer.stop()
+	time_label.text = "Time: " + format_time(GameTimer.time)
+	
 	var base_y := label.position.y
 
 	var colors := [
@@ -56,3 +62,10 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	get_tree().quit()
+
+func format_time(t: float) -> String:
+	var minutes := int(t) / 60
+	var seconds := int(t) % 60
+	var milliseconds := int((t - int(t)) * 100)
+
+	return "%02d:%02d.%02d" % [minutes, seconds, milliseconds]

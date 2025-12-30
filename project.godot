@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Pink-World"
-run/main_scene="uid://beg3clvpca62w"
+run/main_scene="uid://d2an5er8gp5tk"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameTimer="*res://scripts/GameTimer.gd"
+FadeLayer="*res://ui/FadeLayer.tscn"
 
 [dotnet]
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://p6ef4asrjjtv"]
+
+[ext_resource type="Script" uid="uid://dc7ekxpclolhq" path="res://scripts/FadeLayer.gd" id="1_kgugr"]
+
+[node name="FadeLayer" type="CanvasLayer"]
+script = ExtResource("1_kgugr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.7999, 16.1998)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
