@@ -1,16 +1,9 @@
 extends Control
 
-@onready var deaths_label: Label = $VBoxContainer/DeathsLabel
-@onready var time_label: Label = $VBoxContainer/TimeLabel
 @onready var label: Label = $VBoxContainer/Label
 
 func _ready() -> void:
-	#Timer function
-	print("END SCREEN TIMER VALUE:", GameTimer.time)
-	GameTimer.stop()
-	time_label.text = "Time: " + format_time(GameTimer.time)
-	deaths_label.text = "Deaths: " + str(GameTimer.deaths)
-	
+
 	var base_y := label.position.y
 
 	var colors := [
@@ -61,13 +54,12 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://ui/main_menu.tscn")
-
+	
 func _on_button_2_pressed() -> void:
 	get_tree().quit()
 
-func format_time(t: float) -> String:
-	var minutes := int(t) / 60
-	var seconds := int(t) % 60
-	var milliseconds := int((t - int(t)) * 100)
+func _on_button_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/statistics.tscn")
 
-	return "%02d:%02d.%02d" % [minutes, seconds, milliseconds]
+
+	

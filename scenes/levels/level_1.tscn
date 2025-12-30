@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d2an5er8gp5tk"]
+[gd_scene load_steps=33 format=3 uid="uid://d2an5er8gp5tk"]
 
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="1_6761a"]
 [ext_resource type="Script" uid="uid://d3iwd4nb6ke0n" path="res://scripts/level_1.gd" id="1_iav0o"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
 [ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="11_excbq"]
+[ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="13_mm8aj"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="14_mm8aj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpwj6"]
@@ -208,11 +209,15 @@ _data = {
 &"new_animation1": SubResource("Animation_qpwj6")
 }
 
+[sub_resource type="Theme" id="Theme_wtwp4"]
+default_font = ExtResource("13_mm8aj")
+default_font_size = 22
+
 [node name="level1" type="Node2D"]
 script = ExtResource("1_iav0o")
 
 [node name="Player" parent="." instance=ExtResource("3_nsrm0")]
-position = Vector2(-1528, -37)
+position = Vector2(-433, -549)
 
 [node name="WaterArea" parent="." instance=ExtResource("1_6761a")]
 position = Vector2(-415, 80)
@@ -378,10 +383,9 @@ dialogue_lines = Array[String](["You're so close"])
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MenuButton" type="Button" parent="CanvasLayer"]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 136.0
-offset_bottom = 56.0
+offset_right = 157.0
+offset_bottom = 46.0
+theme = SubResource("Theme_wtwp4")
 text = "Menu"
 script = ExtResource("11_excbq")
 

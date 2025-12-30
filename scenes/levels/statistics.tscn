@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpwuruh7v88af"]
+
+[ext_resource type="Script" uid="uid://hfwokriolv7j" path="res://scripts/statistics.gd" id="1_ftqvk"]
+[ext_resource type="Shader" uid="uid://dppbu4plcj4lt" path="res://ui/new_shader.gdshader" id="2_3k6i1"]
+[ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="3_tvgto"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0qepi"]
+shader = ExtResource("2_3k6i1")
+shader_parameter/speed = 2.5
+shader_parameter/frequency = 8.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ljxa"]
+font = ExtResource("3_tvgto")
+font_size = 40
+font_color = Color(0.982343, 0.982342, 0.982342, 1)
+outline_size = 2
+outline_color = Color(0.377799, 9.93178e-05, 0.378605, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ftqvk"]
+font = ExtResource("3_tvgto")
+font_size = 22
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3k6i1"]
+font = ExtResource("3_tvgto")
+font_size = 22
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tvgto"]
+font = ExtResource("3_tvgto")
+font_size = 22
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StatisticsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ftqvk")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1112.0
+offset_bottom = -608.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -498.0
+offset_top = -115.0
+offset_right = 498.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+material = SubResource("ShaderMaterial_0qepi")
+layout_mode = 2
+text = "Statistics"
+label_settings = SubResource("LabelSettings_0ljxa")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "You completed the game in x . "
+label_settings = SubResource("LabelSettings_ftqvk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeathsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "You died x times!"
+label_settings = SubResource("LabelSettings_3k6i1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StarsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "You collected x / 16 stars!"
+label_settings = SubResource("LabelSettings_tvgto")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 436.0
+offset_right = 693.0
+offset_bottom = 587.0
+alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="QuitButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Exit
+"
