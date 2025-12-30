@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://beg3clvpca62w"]
+[gd_scene load_steps=74 format=3 uid="uid://beg3clvpca62w"]
 
 [ext_resource type="Script" uid="uid://dsg7rtgdck2cm" path="res://scripts/level_2.gd" id="1_1a10c"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="2_ra442"]
@@ -17,10 +17,12 @@
 [ext_resource type="PackedScene" uid="uid://cehnl8bshnvw4" path="res://scenes/Materials/cloud_2.tscn" id="9_gw1l3"]
 [ext_resource type="PackedScene" uid="uid://d2vs1203tkym8" path="res://scenes/Materials/cloud_respawning_fast.tscn" id="10_p4se4"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qsp8v"]
-[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/manu_button.gd" id="15_1yj8c"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="15_1yj8c"]
+[ext_resource type="PackedScene" uid="uid://bqdqxfplx01w" path="res://scenes/Materials/star_fragment.tscn" id="17_mx6s3"]
 [ext_resource type="PackedScene" uid="uid://cor6sh82frrex" path="res://scenes/Materials/spring_plant2.tscn" id="17_v8d84"]
 [ext_resource type="Script" uid="uid://bmjwxeadbcfgl" path="res://scripts/water_area.gd" id="19_p4se4"]
 [ext_resource type="Texture2D" uid="uid://c3cx7kxg1h0on" path="res://assets/Background/Space Backgrounds/Space Background 3.png" id="20_sibr7"]
+[ext_resource type="PackedScene" uid="uid://cy0tmo0v6rly5" path="res://ui/hud.tscn" id="21_7d3nu"]
 [ext_resource type="Texture2D" uid="uid://dwruymrm27l28" path="res://assets/Background/Space Backgrounds/Space Background 2.png" id="21_lkn2k"]
 [ext_resource type="Texture2D" uid="uid://cffcfmqswyxaq" path="res://assets/Background/Space Backgrounds/Space Background.png" id="22_sbygb"]
 [ext_resource type="Texture2D" uid="uid://3ln8kyqvtnbe" path="res://assets/Background/Space Backgrounds/Space Background 4.png" id="23_1c1qw"]
@@ -1252,7 +1254,7 @@ _data = {
 script = ExtResource("1_1a10c")
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(-59, -5)
+position = Vector2(-50, 28)
 collision_layer = 9
 collision_mask = 6153
 
@@ -1630,6 +1632,86 @@ position = Vector2(35, -794)
 [node name="SpringPlant5" parent="SpringPlants" instance=ExtResource("17_v8d84")]
 position = Vector2(-778, -542)
 
+[node name="Fragments" type="Node" parent="."]
+
+[node name="StarFragment" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(1016, -2)
+fragment_id = "level_2_star_1"
+
+[node name="StarFragment2" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(849, 261)
+fragment_id = "level_2_star_2"
+fragment_index = 1
+
+[node name="StarFragment3" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(1083, -464)
+fragment_id = "level_2_star_3"
+fragment_index = 2
+
+[node name="StarFragment4" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(784, -361)
+fragment_id = "level_2_star_4"
+fragment_index = 3
+
+[node name="StarFragment5" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(799, -910)
+fragment_id = "level_2_star_5"
+fragment_index = 4
+
+[node name="StarFragment6" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(425, -904)
+fragment_id = "level_2_star_6"
+fragment_index = 5
+
+[node name="StarFragment7" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-1080, -389)
+fragment_id = "level_2_star_7"
+fragment_index = 6
+
+[node name="StarFragment8" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-1107, 52)
+fragment_id = "level_2_star_8"
+fragment_index = 7
+
+[node name="StarFragment9" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-500, 179)
+fragment_id = "level_2_star_9"
+fragment_index = 7
+
+[node name="StarFragment10" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(340, 155)
+fragment_id = "level_2_star_10"
+fragment_index = 6
+
+[node name="StarFragment11" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-98, -328)
+fragment_id = "level_2_star_11"
+fragment_index = 5
+
+[node name="StarFragment12" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-346, -630)
+fragment_id = "level_2_star_12"
+fragment_index = 4
+
+[node name="StarFragment13" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-279, -873)
+fragment_id = "level_2_star_13"
+fragment_index = 3
+
+[node name="StarFragment14" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-71, -569)
+fragment_id = "level_2_star_14"
+fragment_index = 2
+
+[node name="StarFragment15" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-343, -27)
+fragment_id = "level_2_star_15"
+fragment_index = 1
+
+[node name="StarFragment16" parent="Fragments" instance=ExtResource("17_mx6s3")]
+position = Vector2(-841, -200)
+fragment_id = "level_2_star_16"
+
 [node name="NextLevel" parent="." instance=ExtResource("10_qsp8v")]
 position = Vector2(973, -885)
 
@@ -1638,6 +1720,8 @@ position = Vector2(973, -885)
 [node name="Guide" parent="." instance=ExtResource("8_8qukl")]
 position = Vector2(-5, -12)
 dialogue_lines = Array[String](["Welcome, Lumi.", "You’ve reached the World of Petals and Stars — where gentle dreams grow under endless skies.", "This place reflects your calm… and your doubts.", "As you explore, you may find fragments of fallen stars.", "They hold pieces of forgotten memories, waiting to be remembered.", "Listen closely. The exit lies ahead, hidden where dreams begin to thin.", "Stay light on your feet, and trust yourself. I’m still with you."])
+
+[node name="HUD" parent="." instance=ExtResource("21_7d3nu")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

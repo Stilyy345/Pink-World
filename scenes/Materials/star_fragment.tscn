@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqdqxfplx01w"]
+
+[ext_resource type="Script" uid="uid://cd6xod2cospxv" path="res://scripts/star_fragment.gd" id="1_unl1o"]
+[ext_resource type="Texture2D" uid="uid://df4ilykv5gvdk" path="res://assets/Materials/Stars.png" id="2_6rhs1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6rhs1"]
+radius = 6.08276
+
+[sub_resource type="Animation" id="Animation_mbi1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.701961)]
+}
+
+[sub_resource type="Animation" id="Animation_6rhs1"]
+resource_name = "float"
+length = 1.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2),
+"transitions": PackedFloat32Array(1.93187, 0.482968, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -4), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.701961)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jf0ky"]
+_data = {
+&"RESET": SubResource("Animation_mbi1d"),
+&"float": SubResource("Animation_6rhs1")
+}
+
+[node name="StarFragment" type="Area2D"]
+script = ExtResource("1_unl1o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.701961)
+texture = ExtResource("2_6rhs1")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6rhs1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+&"": SubResource("AnimationLibrary_jf0ky")
+}
+autoplay = "float"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

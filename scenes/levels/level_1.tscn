@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
-[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/manu_button.gd" id="11_excbq"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="11_excbq"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="14_mm8aj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpwj6"]
