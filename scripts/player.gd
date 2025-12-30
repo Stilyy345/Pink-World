@@ -64,7 +64,7 @@ func start_water_death():
 	if drowning:
 		return
 
-	drowning = true
+	drowning = true 
 	velocity = Vector2.ZERO
 
 	# Optional: lock animation
@@ -88,12 +88,8 @@ func start_water_death():
 		0.6
 	)
 
-	tween.finished.connect(_respawn_from_water)
+	_restart_level_after_delay()
 	
-func _respawn_from_water():
-	global_position = spawn_position
-	velocity = Vector2.ZERO
-	drowning = false
-
-	$Sprite2D.modulate = Color.WHITE
-	anim.play("default")
+func _restart_level_after_delay() -> void:
+	await get_tree().create_timer(1.25).timeout
+	get_tree().reload_current_scene()

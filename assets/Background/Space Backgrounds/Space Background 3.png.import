@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cssdbsvqg5r8"
-path="res://.godot/imported/Tiles.png-888e22c529b80008dfd5132572b2dfff.ctex"
+uid="uid://c3cx7kxg1h0on"
+path="res://.godot/imported/Space Background 3.png-8daa6805278af6d453bcd9283c5a9cdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-888e22c529b80008dfd5132572b2dfff.ctex"]
+source_file="res://assets/Background/Space Backgrounds/Space Background 3.png"
+dest_files=["res://.godot/imported/Space Background 3.png-8daa6805278af6d453bcd9283c5a9cdd.ctex"]
 
 [params]
 
