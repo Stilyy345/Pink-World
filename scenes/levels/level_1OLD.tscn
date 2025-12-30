@@ -573,6 +573,8 @@ _data = {
 z_index = 5
 position = Vector2(1106, -104)
 scale = Vector2(0.608238, 0.608238)
+speed = null
+jump_velocity = null
 
 [node name="Killzone" parent="." instance=ExtResource("2_bp56n")]
 

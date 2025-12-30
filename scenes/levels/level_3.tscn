@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dtmdkalawwjqd"]
 
-[ext_resource type="Script" uid="uid://c0jbkv8fwwx3v" path="res://scripts/level_3.gd" id="1_o8c3j"]
+[ext_resource type="Script" path="res://scenes/levels/level_3.gd" id="1_o8c3j"]
 [ext_resource type="Shader" uid="uid://dppbu4plcj4lt" path="res://ui/new_shader.gdshader" id="2_0ljxa"]
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="2_44gv1"]
 
