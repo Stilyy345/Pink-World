@@ -46,7 +46,7 @@ anchor_bottom = 0.5
 offset_left = -498.0
 offset_top = -115.0
 offset_right = 498.0
-offset_bottom = 155.0
+offset_bottom = 204.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -55,23 +55,11 @@ alignment = 1
 material = SubResource("ShaderMaterial_0qepi")
 layout_mode = 2
 text = "Gongratulations! 
-You are the winner!"
+You are a winner!"
 label_settings = SubResource("LabelSettings_0ljxa")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-
-[node name="TimeLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Completion time: 00:00.00"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DeathsLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Deaths: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -84,6 +72,19 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_vertical = 4
 text = "Main Menu"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 10
+
+[node name="Button3" type="Button" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Statistics
+"
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -98,4 +99,5 @@ size_flags_vertical = 4
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer3/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/Button2" to="." method="_on_button_2_pressed"]

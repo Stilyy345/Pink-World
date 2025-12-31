@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy0tmo0v6rly5"]
+[gd_scene load_steps=5 format=3 uid="uid://cy0tmo0v6rly5"]
 
 [ext_resource type="Script" uid="uid://bfylfbj34joyx" path="res://scripts/hud.gd" id="1_276te"]
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="1_rbyyf"]
@@ -12,23 +12,45 @@ font_color = Color(1, 0.815686, 1, 1)
 outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_546lt"]
+font = ExtResource("1_rbyyf")
+font_size = 22
+font_color = Color(1, 0.815686, 1, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_276te")
 
-[node name="StarsLabel" type="Label" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -157.0
-offset_top = 1.0
-offset_bottom = 47.0
+offset_left = -200.0
+offset_bottom = 50.0
 grow_horizontal = 0
-scale = Vector2(1, 0.96)
-pivot_offset = Vector2(5, 5)
+pivot_offset = Vector2(-16, 16)
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
 tooltip_text = "
 "
-text = "Stars Collected: 0"
+text = "Stars Collected:"
 label_settings = SubResource("LabelSettings_276te")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="StarsValue" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_546lt")
+horizontal_alignment = 2
+vertical_alignment = 1
