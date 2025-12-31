@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=33 format=3 uid="uid://d2an5er8gp5tk"]
-
+[gd_scene load_steps=34 format=3 uid="uid://d2an5er8gp5tk"]
 
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="1_6761a"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_iav0o"]
@@ -13,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
-[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="11_excbq"]
+[ext_resource type="Script" path="res://scenes/levels/manu_button.gd" id="11_excbq"]
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="13_mm8aj"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="14_mm8aj"]
 [ext_resource type="Texture2D" uid="uid://cikbsif47jc2b" path="res://assets/Background/Space Background (2).png" id="14_wtwp4"]
@@ -220,9 +218,7 @@ default_font_size = 22
 script = ExtResource("1_iav0o")
 
 [node name="Player" parent="." instance=ExtResource("3_nsrm0")]
-
-position = Vector2(-433, -549)
-
+position = Vector2(-26, 114)
 
 [node name="WaterArea" parent="." instance=ExtResource("1_6761a")]
 position = Vector2(-415, 80)
