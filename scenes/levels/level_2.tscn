@@ -1,6 +1,6 @@
-[gd_scene load_steps=76 format=3 uid="uid://beg3clvpca62w"]
+[gd_scene load_steps=75 format=3 uid="uid://beg3clvpca62w"]
 
-[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_1a10c"]
+[ext_resource type="Script" uid="uid://dsg7rtgdck2cm" path="res://scripts/level_2.gd" id="1_1a10c"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="2_ra442"]
 [ext_resource type="Texture2D" uid="uid://cvra4nqrhupj2" path="res://assets/Tiles/AssetSheet_Pink.png" id="3_r88tb"]
 [ext_resource type="Texture2D" uid="uid://caeg4pahpep81" path="res://assets/Tiles/CosmicLilac_Tiles.png" id="4_1yj8c"]
@@ -11,18 +11,17 @@
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="6_qpwj6"]
 [ext_resource type="PackedScene" uid="uid://dcdfgaknn0gka" path="res://scenes/Materials/Platform4.tscn" id="6_v8d84"]
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="7_ibugp"]
-[ext_resource type="PackedScene" path="res://scenes/Materials/Platform5.tscn" id="7_ndlae"]
+[ext_resource type="PackedScene" uid="uid://cjbvllgs5qtyd" path="res://scenes/Materials/Platform5.tscn" id="7_ndlae"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="8_8qukl"]
 [ext_resource type="PackedScene" uid="uid://byuisg5swypli" path="res://ui/dialogue_ui.tscn" id="9_3p04p"]
-[ext_resource type="PackedScene" path="res://scenes/Materials/cloud_2.tscn" id="9_gw1l3"]
+[ext_resource type="PackedScene" uid="uid://cehnl8bshnvw4" path="res://scenes/Materials/cloud_2.tscn" id="9_gw1l3"]
 [ext_resource type="PackedScene" uid="uid://d2vs1203tkym8" path="res://scenes/Materials/cloud_respawning_fast.tscn" id="10_p4se4"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qsp8v"]
-[ext_resource type="Script" path="res://scenes/levels/manu_button.gd" id="15_1yj8c"]
-[ext_resource type="PackedScene" path="res://scenes/Materials/star_fragment.tscn" id="17_mx6s3"]
-[ext_resource type="PackedScene" path="res://scenes/Materials/spring_plant2.tscn" id="17_v8d84"]
-[ext_resource type="Script" path="res://scripts/water_area.gd" id="19_p4se4"]
+[ext_resource type="PackedScene" uid="uid://bqdqxfplx01w" path="res://scenes/Materials/star_fragment.tscn" id="17_mx6s3"]
+[ext_resource type="PackedScene" uid="uid://cor6sh82frrex" path="res://scenes/Materials/spring_plant2.tscn" id="17_v8d84"]
+[ext_resource type="Script" uid="uid://bmjwxeadbcfgl" path="res://scripts/water_area.gd" id="19_p4se4"]
 [ext_resource type="Texture2D" uid="uid://c3cx7kxg1h0on" path="res://assets/Background/Space Backgrounds/Space Background 3.png" id="20_sibr7"]
-[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="21_7d3nu"]
+[ext_resource type="PackedScene" uid="uid://cy0tmo0v6rly5" path="res://ui/hud.tscn" id="21_7d3nu"]
 [ext_resource type="Texture2D" uid="uid://dwruymrm27l28" path="res://assets/Background/Space Backgrounds/Space Background 2.png" id="21_lkn2k"]
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="22_r6ket"]
 [ext_resource type="Texture2D" uid="uid://cffcfmqswyxaq" path="res://assets/Background/Space Backgrounds/Space Background.png" id="22_sbygb"]
@@ -1259,7 +1258,7 @@ default_font_size = 22
 script = ExtResource("1_1a10c")
 
 [node name="Player" parent="." instance=ExtResource("2_ra442")]
-position = Vector2(329, -831)
+position = Vector2(-50, 20)
 collision_layer = 9
 collision_mask = 6153
 
@@ -1740,7 +1739,6 @@ theme = SubResource("Theme_xworo")
 text = "Menu
 "
 icon_alignment = 1
-script = ExtResource("15_1yj8c")
 
 [node name="Backgrounds" type="Node" parent="."]
 

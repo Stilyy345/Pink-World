@@ -1,10 +1,10 @@
 [gd_scene load_steps=33 format=3 uid="uid://d2an5er8gp5tk"]
 
 [ext_resource type="PackedScene" uid="uid://diaenxqbo82jn" path="res://scenes/Materials/killzone.tscn" id="1_6761a"]
-[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_iav0o"]
+[ext_resource type="Script" uid="uid://d3iwd4nb6ke0n" path="res://scripts/level_1.gd" id="1_iav0o"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="3_nsrm0"]
 [ext_resource type="TileSet" uid="uid://c1ad866w4j21w" path="res://assets/Tiles/level_1_new.tres" id="3_qxy0u"]
-[ext_resource type="Script" path="res://scripts/water_area.gd" id="4_dnkej"]
+[ext_resource type="Script" uid="uid://bmjwxeadbcfgl" path="res://scripts/water_area.gd" id="4_dnkej"]
 [ext_resource type="PackedScene" uid="uid://wblsdcbxropy" path="res://scenes/Materials/Platform2.tscn" id="4_excbq"]
 [ext_resource type="PackedScene" uid="uid://byuisg5swypli" path="res://ui/dialogue_ui.tscn" id="5_iav0o"]
 [ext_resource type="PackedScene" uid="uid://cousq1ucowu16" path="res://scenes/Materials/cloud.tscn" id="6_sk5k4"]
@@ -217,7 +217,7 @@ default_font_size = 22
 script = ExtResource("1_iav0o")
 
 [node name="Player" parent="." instance=ExtResource("3_nsrm0")]
-position = Vector2(-433, -549)
+position = Vector2(-1514, -44)
 
 [node name="WaterArea" parent="." instance=ExtResource("1_6761a")]
 position = Vector2(-415, 80)
