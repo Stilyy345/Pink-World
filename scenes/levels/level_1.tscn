@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://uyqp1oysyot4" path="res://scenes/Materials/cloud_respawning.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bo5ucb2wkvtx2" path="res://scenes/Materials/spring_plant.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://djvadk4qtrr1m" path="res://scenes/Materials/next_level.tscn" id="10_qxy0u"]
-[ext_resource type="Script" path="res://scenes/levels/manu_button.gd" id="11_excbq"]
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="13_mm8aj"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="14_iwr0g"]
 [ext_resource type="PackedScene" uid="uid://cym07edxcvjf1" path="res://scenes/characters/guide.tscn" id="14_mm8aj"]
 [ext_resource type="Texture2D" uid="uid://cikbsif47jc2b" path="res://assets/Background/Space Background (2).png" id="14_wtwp4"]
 
@@ -387,7 +387,7 @@ offset_right = 157.0
 offset_bottom = 46.0
 theme = SubResource("Theme_wtwp4")
 text = "Menu"
-script = ExtResource("11_excbq")
+script = ExtResource("14_iwr0g")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -10

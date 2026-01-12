@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://beg3clvpca62w"]
+[gd_scene load_steps=76 format=3 uid="uid://beg3clvpca62w"]
 
 [ext_resource type="Script" uid="uid://dsg7rtgdck2cm" path="res://scripts/level_2.gd" id="1_1a10c"]
 [ext_resource type="PackedScene" uid="uid://vh7ve8pjawkw" path="res://scenes/characters/Player.tscn" id="2_ra442"]
@@ -26,6 +26,7 @@
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="22_r6ket"]
 [ext_resource type="Texture2D" uid="uid://cffcfmqswyxaq" path="res://assets/Background/Space Backgrounds/Space Background.png" id="22_sbygb"]
 [ext_resource type="Texture2D" uid="uid://3ln8kyqvtnbe" path="res://assets/Background/Space Backgrounds/Space Background 4.png" id="23_1c1qw"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="23_r6ket"]
 [ext_resource type="Texture2D" uid="uid://7ygypd8i30eo" path="res://assets/Background/Space Backgrounds/Space Background 5.png" id="24_1a10c"]
 [ext_resource type="Texture2D" uid="uid://stnv3fk0kav0" path="res://assets/Background/Space Backgrounds/Space Background 6.png" id="25_mx6s3"]
 
@@ -1739,6 +1740,7 @@ theme = SubResource("Theme_xworo")
 text = "Menu
 "
 icon_alignment = 1
+script = ExtResource("23_r6ket")
 
 [node name="Backgrounds" type="Node" parent="."]
 
