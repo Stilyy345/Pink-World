@@ -26,7 +26,7 @@
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="22_r6ket"]
 [ext_resource type="Texture2D" uid="uid://cffcfmqswyxaq" path="res://assets/Background/Space Backgrounds/Space Background.png" id="22_sbygb"]
 [ext_resource type="Texture2D" uid="uid://3ln8kyqvtnbe" path="res://assets/Background/Space Backgrounds/Space Background 4.png" id="23_1c1qw"]
-[ext_resource type="Script" path="res://scripts/menu_button.gd" id="23_r6ket"]
+[ext_resource type="Script" uid="uid://cy5gj35qhucy4" path="res://scripts/menu_button.gd" id="23_r6ket"]
 [ext_resource type="Texture2D" uid="uid://7ygypd8i30eo" path="res://assets/Background/Space Backgrounds/Space Background 5.png" id="24_1a10c"]
 [ext_resource type="Texture2D" uid="uid://stnv3fk0kav0" path="res://assets/Background/Space Backgrounds/Space Background 6.png" id="25_mx6s3"]
 
@@ -1645,6 +1645,7 @@ position = Vector2(-778, -542)
 [node name="StarFragment" parent="Fragments" instance=ExtResource("17_mx6s3")]
 position = Vector2(1016, -2)
 fragment_id = "level_2_star_1"
+fragment_index = 1
 
 [node name="StarFragment2" parent="Fragments" instance=ExtResource("17_mx6s3")]
 position = Vector2(849, 261)
