@@ -1645,6 +1645,7 @@ position = Vector2(-778, -542)
 [node name="StarFragment" parent="Fragments" instance=ExtResource("17_mx6s3")]
 position = Vector2(1016, -2)
 fragment_id = "level_2_star_1"
+fragment_index = 1
 
 [node name="StarFragment2" parent="Fragments" instance=ExtResource("17_mx6s3")]
 position = Vector2(849, 261)
