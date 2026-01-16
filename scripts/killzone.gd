@@ -11,7 +11,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 	triggered = true
 	GameTimer.add_death()
-	print("You died!")
+	#print("You died!")
 	timer.start()
 
 func _on_timer_timeout() -> void:

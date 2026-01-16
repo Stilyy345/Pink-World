@@ -9,16 +9,14 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name != "Player":
 		return
 	
-	print("Trigger entered by:", body.name)
-
 	if trigger_once and _triggered:
 		return
 
 	var ui := get_tree().get_first_node_in_group("DialogueUI")
-	print("Found DialogueUI node:", ui)
+	#print("Found DialogueUI node:", ui)
 
 	if ui:
-		print("Calling start_dialogue...")
+		#print("Calling start_dialogue...")
 		ui.start_dialogue(dialogue_lines)
 	else:
 		print("ERROR: No node in group 'DialogueUI'")

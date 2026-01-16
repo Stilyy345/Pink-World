@@ -1,5 +1,9 @@
 extends Node
 
+func _ready():
+	print("GAMETIMER READY")
+	set_process(true)
+
 var deaths := 0
 var time := 0.0
 var running := false
@@ -7,13 +11,18 @@ var star_fragments := 0
 var collected_fragments: Dictionary = {} # IDS
 
 func start():
+	print("TIMER START")
+	if running:
+		return
 	time = 0.0
 	running = true
 
 func stop():
+	print("TIMER STOP")
 	running = false
 
 func reset():
+	print("TIMER RESET")
 	time = 0.0
 	deaths = 0
 	star_fragments = 0

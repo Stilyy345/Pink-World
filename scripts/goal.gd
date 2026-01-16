@@ -10,7 +10,7 @@ func _on_body_entered(body: Node2D) -> void:
 		push_error("next_level не е зададен в Inspector!")
 		return
 
-	print("Loading next level…")
+	#print("Loading next level…")
 	get_tree().change_scene_to_packed(next_level)
 
 

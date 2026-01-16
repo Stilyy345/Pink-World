@@ -2,8 +2,9 @@ extends Control
 
 @onready var label: Label = $VBoxContainer/Label
 
-func _ready() -> void:
 
+func _ready() -> void:
+	GameTimer.stop()
 	var base_y := label.position.y
 
 	var colors := [

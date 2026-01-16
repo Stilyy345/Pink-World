@@ -6,7 +6,7 @@ extends Control
 @onready var deaths_label: Label = $VBoxContainer/DeathsLabel
 
 # CHANGE THIS to the real total later
-const TOTAL_STARS := 16
+const TOTAL_STARS := 20
 
 func _ready():
 	# Fill statistics

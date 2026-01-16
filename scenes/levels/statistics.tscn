@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpwuruh7v88af"]
+[gd_scene load_steps=19 format=3 uid="uid://bpwuruh7v88af"]
 
 [ext_resource type="Script" uid="uid://hfwokriolv7j" path="res://scripts/statistics.gd" id="1_ftqvk"]
 [ext_resource type="Shader" uid="uid://dppbu4plcj4lt" path="res://ui/new_shader.gdshader" id="2_3k6i1"]
@@ -43,7 +43,49 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3k6i1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3k6i1"]
+bg_color = Color(0.545098, 0.00784314, 0.298039, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvgto"]
+bg_color = Color(0.545098, 0.00784314, 0.298039, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7pi7"]
+bg_color = Color(0.941176, 0.14902, 0.815686, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tvgto"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5rl7"]
+bg_color = Color(0.545098, 0.00784314, 0.298039, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ohjn"]
+bg_color = Color(0.545098, 0.00784314, 0.298039, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0we0e"]
+bg_color = Color(0.941176, 0.14902, 0.815686, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="StatisticsScreen" type="Control"]
 layout_mode = 3
@@ -100,31 +142,52 @@ vertical_alignment = 1
 
 [node name="StarsLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "You collected x / 16 stars!"
+text = "You collected x / 20 stars!"
 label_settings = SubResource("LabelSettings_tvgto")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 458.0
-offset_top = 365.0
+offset_top = 349.0
 offset_right = 693.0
-offset_bottom = 516.0
-alignment = 1
+offset_bottom = 475.0
 
-[node name="MainMenuButton" type="Button" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer2/MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3k6i1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3k6i1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tvgto")
+theme_override_styles/normal = SubResource("StyleBoxFlat_o7pi7")
 text = "Main Menu"
 
-[node name="QuitButton" type="Button" parent="HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer2"]
 layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="QuitButton" type="Button" parent="VBoxContainer2/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tvgto")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h5rl7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1ohjn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0we0e")
 text = "Exit
 "
 
-[connection signal="pressed" from="HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MarginContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MarginContainer2/QuitButton" to="." method="_on_quit_button_pressed"]

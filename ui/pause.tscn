@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bw1eyl400bk8f"]
 
-[ext_resource type="Script" uid="uid://wuejph0n0sx6" path="res://pause.gd" id="1_wn0le"]
+[ext_resource type="Script" uid="uid://wuejph0n0sx6" path="res://scripts/pause.gd" id="1_wn0le"]
 [ext_resource type="Texture2D" uid="uid://k41uyrbbnk6p" path="res://assets/Background/Doc1.png" id="2_foqgb"]
 [ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="3_iri2v"]
 
