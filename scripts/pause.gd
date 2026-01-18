@@ -1,14 +1,11 @@
 extends Control
 
 func _ready() -> void:
-	# Ensure menu works while game is paused
-	process_mode = Node.PROCESS_MODE_ALWAYS
+	pass
 
 
 func _on_button_pressed() -> void:
-	get_tree().paused = false
-	hide()  # hide pause menu
-
+	pass
 
 func _on_setting_pressed() -> void:
 	# Open settings without unpausing

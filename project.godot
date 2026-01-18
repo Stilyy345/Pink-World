@@ -13,7 +13,6 @@ config_version=5
 config/name="Pink-World"
 run/main_scene="uid://j2tf7ava8p34"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 

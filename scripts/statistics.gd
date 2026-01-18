@@ -27,7 +27,7 @@ func _format_time(t: float) -> String:
 
 func _on_main_menu_button_pressed():
 	GameTimer.reset()
-	get_tree().change_scene_to_file("res://ui/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu.tscn")
 
 func _on_quit_button_pressed():
 	get_tree().quit()

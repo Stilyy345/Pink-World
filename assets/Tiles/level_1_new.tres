@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cssdbsvqg5r8" path="res://assets/Tiles/Tiles.png" id="5_wia3f"]
 [ext_resource type="Texture2D" uid="uid://j44t8g8oiv7n" path="res://assets/Background/Mountain-Dusk.png" id="6_0ceex"]
 [ext_resource type="Texture2D" uid="uid://blshpklm33nvk" path="res://assets/Background/Space Background.png" id="6_rum6r"]
-[ext_resource type="Texture2D" uid="uid://d00qj3xhiua4j" path="res://assets/Background/Space Background (1).png" id="8_wkllu"]
+[ext_resource type="Texture2D" uid="uid://d00qj3xhiua4j" path="res://assets/Background/Space Backgrounds/Space Background (1).png" id="8_wkllu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsrm0"]
 texture = ExtResource("1_p4i5k")

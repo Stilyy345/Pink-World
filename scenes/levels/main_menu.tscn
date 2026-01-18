@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bw1eyl400bk8f"]
+[gd_scene load_steps=9 format=3 uid="uid://j2tf7ava8p34"]
 
-[ext_resource type="Script" uid="uid://wuejph0n0sx6" path="res://scripts/pause.gd" id="1_wn0le"]
-[ext_resource type="Texture2D" uid="uid://k41uyrbbnk6p" path="res://assets/Background/Doc1.png" id="2_foqgb"]
-[ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="3_iri2v"]
+[ext_resource type="Texture2D" uid="uid://k41uyrbbnk6p" path="res://assets/Background/Doc1.png" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://sebni1ffb7y4" path="res://scripts/main_menu.gd" id="1_wk0pr"]
+[ext_resource type="FontFile" uid="uid://bl40rqtlgfv6f" path="res://assets/Background/Super Croissant.ttf" id="2_bqqt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vue75"]
-texture = ExtResource("2_foqgb")
+texture = ExtResource("1_ekxnf")
 modulate_color = Color(0.45098, 0.462745, 0.486275, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
@@ -40,7 +40,7 @@ shadow_color = Color(0, 0, 0, 0.313726)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[node name="Pause" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,7 +49,7 @@ offset_top = -2.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wn0le")
+script = ExtResource("1_wk0pr")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -86,7 +86,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
-text = "Resume"
+text = "Start game"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -131,7 +131,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0.834968, 0.118663, 0.642299, 1)
 theme_override_constants/shadow_offset_x = 10
-theme_override_fonts/font = ExtResource("3_iri2v")
+theme_override_fonts/font = ExtResource("2_bqqt6")
 theme_override_font_sizes/font_size = 80
 text = "Pink World
 "
