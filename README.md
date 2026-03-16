@@ -7,19 +7,19 @@ The game features two levels, collectible items, and interactive gameplay mechan
 ## Screenshots
 
 ### Main Menu
-![Main Menu](screenshots/main-menu.png)
+![Main Menu](screenshots/main_menu.png)
 
 ### Level 1
-![Level 1](screenshots/level1-gameplay.png)
+![Level 1](screenshots/level_1.png)
 
 ### Level 2
-![Level 2](screenshots/level2-gameplay.png)
+![Level 2](screenshots/level_2.png)
 
 ### Gameplay Mechanics
-![Gameplay](screenshots/gameplay-mechanics.png)
+![Gameplay](screenshots/gameplay_mechanics.png)
 
 ### Statistics Screen
-![Stats](screenshots/statistics-screen.png)
+![Stats](screenshots/statistics_screen.png)
 
 ## Technologies
 - Godot Engine
