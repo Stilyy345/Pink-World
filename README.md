@@ -4,6 +4,23 @@ Pink World is a 2D platformer game developed using the **Godot Engine** as part 
 
 The game features two levels, collectible items, and interactive gameplay mechanics.
 
+## Screenshots
+
+### Main Menu
+![Main Menu](screenshots/main-menu.png)
+
+### Level 1
+![Level 1](screenshots/level1-gameplay.png)
+
+### Level 2
+![Level 2](screenshots/level2-gameplay.png)
+
+### Gameplay Mechanics
+![Gameplay](screenshots/gameplay-mechanics.png)
+
+### Statistics Screen
+![Stats](screenshots/statistics-screen.png)
+
 ## Technologies
 - Godot Engine
 - GDScript
