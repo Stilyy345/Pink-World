@@ -19,10 +19,14 @@ The remaining parts of the game were developed collaboratively or by my project 
 
 ## Screenshots
 
-### Main Menu
+### Main Menu — My Contribution
 ![Main Menu](screenshots/main_menu.png)
 
-### Level 1
+### Options Menu — My Contribution
+
+![Options Menu](screenshots/option-menu.png)
+
+### Level 1 — My Contribution
 ![Level 1](screenshots/level_1.png)
 
 ### Level 2
@@ -33,6 +37,11 @@ The remaining parts of the game were developed collaboratively or by my project 
 
 ### Statistics Screen
 ![Stats](screenshots/statistics_screen.png)
+
+### Victory Screen — My Contribution
+
+![Victory Screen](screenshots/victory-screen.png)
+
 
 ## Technologies
 - Godot Engine
