@@ -27,7 +27,7 @@ The remaining parts of the game were developed collaboratively or by my project 
 ![Options Menu](screenshots/option-menu.png)
 
 ### Level 1 — My Contribution
-![Level 1](screenshots/level_1.png)
+![Level 1](screenshots/level1-pool.png)
 
 ### Level 2
 ![Level 2](screenshots/level_2.png)
